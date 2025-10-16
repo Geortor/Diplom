@@ -1,0 +1,269 @@
+.main {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 50px 25px 100px;
+    margin: 71px 20% 400px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.greetingBlock {
+    display: flex;
+    gap: 70px;
+}
+
+.greetingBlockInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.greetingBlockInformation .logo {
+    width: 140px;
+    height: 70px;
+}
+
+.greetingBlockInformation .title, .aboutUsBlockInformation .title,
+.ourServicesBlockInformation .title, .socialMediaBlockInformation .title {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.greetingBlockInformation .description, .aboutUsBlockInformation .description,
+.socialMediaBlockInformation .description {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.greetingBlockImage {
+    display: flex;
+    align-items: center;
+}
+
+.greetingBlockInformation .button, .aboutUsBlockInformation .button {
+    display: flex;
+}
+
+.greetingBlockInformation .button span, .aboutUsBlockInformation .button span {
+    background-color: #FFB100;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 5px 20px;
+    height: 30px;
+    color: #1C1C1C;
+    transition: all 0.2s;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.greetingBlockInformation .button span:hover, .aboutUsBlockInformation .button span:hover {
+    background-color: #e59c00;
+}
+
+#greetingImage {
+    display: flex;
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUs {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.aboutUsBlockInformation {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+#aboutUsImage {
+    width: 500px;
+    border-radius: 20px;
+}
+
+.ourServices, .socialMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.ourServicesBlockInformation .title, .socialMediaBlockInformation .title,
+.socialMediaBlockInformation .description {
+    display: flex;
+    justify-content: center;
+}
+
+.ourServicesBlockImages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialMediaBlockInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.socialMediaBlockImages {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*
+temporarily START
+ */
+
+.photo1, .photo2, .photo3 {
+    height: 390px;
+    min-width: 225px;
+    border-radius: 36px;
+    background-color: #bb6210;
+}
+
+.photo4, .photo5 {
+    height: 390px;
+    min-width: 225px;
+    border-radius: 36px;
+    background-color: #0a79d5;
+}
+
+/*
+temporarily END
+ */
+
+/* MEDIA */
+@media (max-width: 993px) {
+    .main {
+        margin: 71px 0 400px;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .greetingBlock, .aboutUs {
+        display: grid;
+        grid-template-areas: "a a"
+        "b b";
+        justify-content: center;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .greetingBlockInformation, .aboutUsBlockInformation {
+        grid-area: b;
+    }
+
+    .greetingBlockInformation .logo {
+        display: none;
+    }
+
+    .greetingBlockInformation .title, .aboutUsBlockInformation .title {
+        font-size: 30px;
+    }
+
+    .greetingBlockInformation .description, .aboutUsBlockInformation .description {
+        font-size: 20px;
+    }
+
+    .greetingBlockImage, .aboutUsBlockImage {
+        display: flex;
+        grid-area: a;
+        justify-content: center;
+    }
+
+    .button {
+        justify-content: center;
+    }
+
+    .greetingBlockInformation .button span, .aboutUsBlockInformation .button span {
+        font-size: 25px;
+        padding: 10px 40px;
+    }
+
+    .socialMediaBlockImages {
+        justify-content: space-between;
+    }
+
+    .ourServices {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .ourServicesBlockInformation, .socialMediaBlockInformation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .ourServicesBlockImages, .socialMediaBlockImages {
+        gap: 20px;
+    }
+
+    .ourServicesBlockImages, .socialMediaBlockImages {
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .ourServicesBlockImages::-webkit-scrollbar, .socialMediaBlockImages::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+@media (max-width: 771px) {
+    .main {
+        margin-bottom: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .greetingBlock, .aboutUs, .ourServicesBlockInformation .title, .socialMediaBlockInformation .title, .ourServices, .socialMedia {
+        width: 90%;
+    }
+
+    .greetingBlockImage img, .aboutUsBlockImage img {
+        max-width: 100%;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .main {
+        padding: 50px 0 100px;
+    }
+
+    .title {
+        font-size: 22px !important;
+    }
+
+    .description {
+        font-size: 18px !important;
+    }
+
+    .greetingBlockInformation .button span, .aboutUsBlockInformation .button span {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+}

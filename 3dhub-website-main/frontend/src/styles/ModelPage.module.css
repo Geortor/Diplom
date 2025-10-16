@@ -1,0 +1,327 @@
+.main {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 50px 25px 100px;
+    margin: 71px 20% 400px;
+}
+
+.contentContainer {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.modelImage {
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    background-color: #1C1C1C;
+    border-radius: 20px;
+}
+
+.modelName {
+    display: flex;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.modelInformation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modelStatistic {
+    display: flex;
+    gap: 10px;
+}
+
+.modelStatistic div {
+    display: flex;
+    height: 35px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.numberOfComments {
+    display: flex;
+    align-items: center;
+}
+
+.numberOfComments img {
+    height: 30px;
+}
+
+#views, #likes, #comments {
+    display: flex;
+    align-items: center;
+}
+
+.authorBlockAndOther {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modelAuthor {
+    display: grid;
+    grid-template-areas: "avatar information"
+        "avatar information"
+        "avatar subscribe";
+    align-items: center;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.modelAuthorAvatar {
+    grid-area: avatar;
+}
+
+.modelAuthorAvatar, .modelAuthorAvatar img {
+    height: 75px;
+    width: 75px;
+}
+
+.modelAuthorInformationWrapper {
+    grid-area: information;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.modelAuthorInformation {
+    gap: 15px;
+}
+
+.modelAuthorInformation, .modelAuthorInformation div, .otherButton, .otherButton div {
+    display: flex;
+    align-items: center;
+}
+
+.modelAuthorUsername {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.modelAuthorInformation img {
+    height: 25px;
+    width: 25px;
+}
+
+.buttonFollow {
+    grid-area: subscribe;
+    background-color: #FFB100;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 15px;
+    width: 100px;
+    padding: 5px 20px;
+    color: #1C1C1C;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.otherButton {
+    gap: 30px;
+}
+
+.otherButton div {
+    gap: 5px;
+}
+
+.otherButton img {
+    width: 35px;
+    height: 35px;
+}
+
+.complaintButton img {
+    width: 30px;
+    height: 30px;
+}
+
+.replyButton {
+    cursor: pointer;
+    font-weight: bold;
+    color: #0075FF;
+}
+
+.complaintButton {
+    cursor: pointer;
+    font-weight: bold;
+    color: #FF4C00;
+}
+
+.modelControlButtons {
+    display: flex;
+    gap: 40px;
+}
+
+.modelControlButtons img {
+    width: 20px;
+    height: 20px;
+}
+
+.modelDownload, .modelAddToCart, .modelBuy {
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 8px 30px;
+    color: white;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.modelDownload, .modelBuy {
+    display: flex;
+    align-items: center;
+    background-color: #11b103;
+    gap: 5px;
+}
+
+.modelAddToCart {
+    display: flex;
+    align-items: center;
+    background-color: #1C1C1C;
+    gap: 5px;
+}
+
+.modelDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modelDescription .title, .modelCommentaryBlock .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modelDescription .description {
+    font-size: 18px;
+}
+
+.modelDateAdd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666666;
+}
+
+.modelDateAdd img {
+    width: 20px;
+}
+
+@media (max-width: 1200px) {
+    .main {
+        margin: 71px 10% 400px;
+    }
+
+    .contentContainer {
+        padding: 0 5%;
+        width: 90%;
+    }
+
+    .modelImage {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modelImage img {
+        width: 80%;
+    }
+
+    .modelDownload {
+        padding: 6px 25px;
+    }
+
+    .modelAuthorAvatar, .modelAuthorAvatar img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .modelAuthorUsername {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main {
+        margin: 71px 5% 400px;
+    }
+}
+
+@media (max-width: 771px) {
+    .otherButton span {
+        display: none;
+    }
+
+    .main {
+        margin-bottom: 0;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .main {
+        padding: 50px 0 100px;
+    }
+
+    .modelName {
+        font-size: 22px;
+    }
+
+    .modelStatistic div {
+        height: 25px;
+    }
+
+    .numberOfComments img {
+        height: 23px;
+    }
+
+    .modelAuthor {
+        grid-template-areas: "avatar information"
+        "avatar information"
+        "subscribe subscribe";
+    }
+
+    .modelAuthorInformation {
+        display: grid;
+        grid-template-areas: "a a"
+        "b c";
+        gap: 0;
+        font-size: 16px;
+    }
+
+    .modelAuthorInformationNameWrapper {
+        grid-area: a;
+    }
+
+    .modelAuthorEvaluation {
+        grid-area: b;
+    }
+
+    .modelAuthorEvaluation img {
+        height: 18px;
+        width: 18px;
+    }
+
+    .modelAuthorLikes {
+        grid-area: c;
+    }
+
+    .modelAuthorLikes img, .modelAuthorVerification img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .buttonFollow {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .modelDownload {
+        font-size: 14px;
+    }
+}

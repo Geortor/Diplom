@@ -1,0 +1,16 @@
+.success, .error {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+.success {
+    color: #68d405;
+}
+
+.error {
+    color: #f30e0e;
+}

@@ -1,0 +1,229 @@
+.main {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 50px 25px 100px;
+    margin: 71px 20% 400px;
+}
+
+.modelsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.modelCard {
+    padding: 20px;
+    height: 450px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1C1C1C;
+    border-radius: 20px;
+    color: white;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.modelCardOverMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modelCardPrice {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.modelCardLike {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modelCardLike img {
+    height: 25px;
+    width: 25px;
+    transition: all 0.1s;
+}
+
+.modelCardLike img:hover {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.modelCardImage {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modelCardImage img {
+    height: 230px;
+    width: 230px;
+    transition: all 0.2s;
+}
+
+.modelCardImage img:hover {
+    height: 250px;
+    width: 250px;
+}
+
+.modelCardAuthor {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.modelCardName, .modelCardAuthorUsername, .modelCardAuthorAvatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modelCardName a {
+    color: white;
+}
+
+.modelCardAuthorAvatar img {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.modelCardAuthorUsername {
+    font-size: 14px;
+}
+
+.modelCardAuthorVerification {
+    display: flex;
+    align-items: center;
+}
+
+.modelCardAuthorVerification img {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.modelCardButtons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.modelCardDownload, .modelCardAddToCart, .modelCardBuy {
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 5px 20px;
+    color: white;
+    transition: all 0.2s;
+    height: 20px;
+    cursor: pointer;
+}
+
+.modelCardDownload, .modelCardBuy {
+    background-color: #11b103;
+}
+
+.modelCardAddToCart {
+    background-color: #e08e09;
+}
+
+/* MEDIA */
+
+@media (max-width: 1202px) {
+    .modelsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 771px) {
+    .main {
+        margin-bottom: 0;
+    }
+
+    .modelsContainer {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .modelCard {
+        height: 405px;
+        width: 225px;
+    }
+
+    .modelCardImage, .modelCardImage img:hover {
+        height: 225px;
+        width: 225px;
+    }
+
+    .modelCardImage img {
+        height: 207px;
+        width: 207px;
+    }
+
+    .modelCardPrice {
+        font-size: 14px;
+    }
+
+    .modelCardAuthorUsername {
+        font-size: 13px;
+    }
+
+    .modelCardDownload, .modelCardAddToCart, .modelCardBuy {
+        font-size: 13px;
+        border-radius: 10px;
+        font-weight: 600;
+        padding: 4px 15px;
+        height: 17px;
+    }
+}
+
+@media (max-width: 580px) {
+    .modelsContainer {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .modelCard {
+        height: 360px;
+        width: 200px;
+        gap: 5px;
+    }
+
+    .modelCardImage, .modelCardImage img:hover {
+        height: 200px;
+        width: 200px;
+    }
+
+    .modelCardImage img {
+        height: 184px;
+        width: 184px;
+    }
+
+    .modelCardPrice {
+        font-size: 13px;
+    }
+
+    .modelCardAuthorUsername {
+        font-size: 12px;
+    }
+
+    .modelCardDownload, .modelCardAddToCart, .modelCardBuy {
+        font-size: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        padding: 4px 15px;
+        height: 15px;
+    }
+}

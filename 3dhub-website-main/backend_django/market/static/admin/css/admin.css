@@ -1,0 +1,35 @@
+body {
+    font-family: 'Lucida Sans Unicode', 'serif';
+}
+
+#branding h1 a:link, #branding h1 a:visited {
+    color: white;
+    font-weight: 400;
+}
+
+#user-tools {
+    color: white;
+}
+
+div.breadcrumbs {
+    background: #ff9b5f;
+}
+
+.object-tools li {
+    display: flex;
+    align-items: center;
+}
+
+.module caption {
+    background-color: #ff7502;
+}
+
+html[data-theme="light"], :root {
+    --primary: #ff7502;
+    --default-button-bg: #ff8112;
+    --default-button-hover-bg: #bb6210;
+    --button-bg: #ff9700;
+    --button-hover-bg: #be7303;
+    --breadcrumbs-fg: #ffbf00;
+    --header-bg: #e77922;;
+}

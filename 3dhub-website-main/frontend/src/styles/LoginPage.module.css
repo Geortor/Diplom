@@ -1,0 +1,202 @@
+.main {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20%;
+}
+
+.loginForm {
+    padding: 10px 75px 50px;
+    border: 2px solid #FFB100;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-width: 300px;
+}
+
+.logoLoginForm {
+    display: flex;
+    justify-content: center;
+}
+
+.loginFormTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logoLoginForm img {
+    width: 150px;
+    height: 150px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginInputBlock span, .passwordInputBlock span {
+    font-weight: 600;
+}
+
+.loginLabel, .passwordLabel {
+    display: flex;
+    gap: 10px;
+}
+
+.registrationButton, .passwordRecovery {
+    color: #0a79d5;
+}
+
+.savePasswordBlock {
+    display: flex;
+    gap: 10px;
+}
+
+.savePasswordCheckBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FFB100;
+    border-radius: 5px;
+    position: relative;
+}
+
+.confirmCheckMark {
+    content: '';
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+    width: 4px;
+    height: 12px;
+    border: solid transparent;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: opacity .5s ease-in;
+    -o-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in;
+}
+
+.loginButtonWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFB100;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 5px 50px;
+    height: 30px;
+    color: #1C1C1C;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.registrationBlock {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+}
+
+input {
+    outline: none;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:focus {
+    border: 1px solid #FFB100;
+}
+
+@media (max-width: 992px) {
+    .loginForm {
+        padding: 10px 70px 50px;
+        border-radius: 45px;
+    }
+
+    .registrationBlock {
+        gap: 5px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 771px) {
+    .loginForm {
+        padding: 10px 60px 40px;
+    }
+
+    .registrationBlock {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 578px) {
+    .loginForm {
+        min-width: 250px;
+        font-size: 14px;
+    }
+
+    .loginForm img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 482px) {
+    .loginForm {
+        min-width: 200px;
+        font-size: 13px;
+        gap: 25px;
+        padding: 10px 30px 30px;
+        border-radius: 30px;
+    }
+
+    .loginForm img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .form {
+        gap: 15px;
+    }
+
+    .loginLabel, .passwordLabel {
+        gap: 5px;
+    }
+
+    .loginButton {
+        font-size: 13px;
+        height: 20px;
+        padding: 5px 30px;
+    }
+
+    .registrationBlock {
+        font-size: 12px;
+    }
+
+    .loginFormTitle {
+        font-size: 19px;
+    }
+}

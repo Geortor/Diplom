@@ -1,0 +1,4 @@
+/3dhub-website.sql
+backend_django/venv
+backend_django/.env
+frontend/node_modules

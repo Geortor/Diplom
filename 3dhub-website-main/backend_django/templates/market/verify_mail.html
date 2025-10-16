@@ -1,0 +1,20 @@
+{% load static %}
+
+{% autoescape off %}
+    <body class="bg-light">
+    <div class="container">
+        <img class="ax-center my-10 w-24" src="https://sun1-28.userapi.com/s/v1/ig2/N9tbo_dBPDxz31XS3dO1MobxJAtJQd-b4UlvGaT6PWT6Px1sCnkxkmVqVAtbuCVkO8cMUG1RELjqnTOk_YMN3h58.jpg?size=200x200&quality=95&crop=0,0,2500,2500&ava=1"/>
+        <div class="card p-6 p-lg-10 space-y-4">
+            <h1 class="h3 fw-700">
+                Подтверждение регистрации
+            </h1>
+            <p>
+                Пожалуйста нажмите на кнопку, чтобы подтвердить регистрацию вашего аккаунта:
+            </p>
+            <a class="btn btn-primary p-3 fw-700" href="http://{{ domain }}/verify_signup?uid={{ uid }}&token={{ token }}" style="color: white;
+                padding: 5px 20px; background-color: orange; text-decoration: none; border-radius: 10px;">Подтвердить
+                регистрацию</a>
+        </div>
+    </div>
+    </body>
+{% endautoescape %}

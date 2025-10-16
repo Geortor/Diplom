@@ -1,0 +1,56 @@
+version: '3.3'
+services:
+  django:
+    build:
+      context: backend_django
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8000:8000"
+    command: gunicorn threedhub_site.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - django_static_volume:/usr/src/app/market/static
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15.0-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=PT?qGNGa~dZBVczE{G|a4MsH?2AobVAN
+      - POSTGRES_DB=3dhub-website
+    env_file:
+      - backend_django/.env
+    ports:
+      - "5432:5432"
+
+  react:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+      - 3000
+    volumes:
+      - react_static_volume:/usr/src/app/build/static
+    command: serve -s build -l 3000
+    depends_on:
+      - django
+
+  nginx:
+    restart: always
+    build: ./nginx
+    volumes:
+      - django_static_volume:/usr/src/app/static
+      - react_static_volume:/usr/src/app/build/static
+    ports:
+      - 80:80
+    depends_on:
+      - react
+
+volumes:
+  postgres_data:
+  django_static_volume:
+  react_static_volume:
